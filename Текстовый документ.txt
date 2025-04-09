@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Переработка полипропилена</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { 
+            font-family: 'Times New Roman', serif; 
+            background: #f8f9fa; 
+        }
+        .navbar { 
+            background: #2c3e50 !important; 
+        }
+        .card { 
+            transition: transform 0.3s; 
+            margin: 10px;
+        }
+        .card:hover { 
+            transform: scale(1.03); 
+        }
+        section { 
+            padding: 60px 0; 
+            border-bottom: 1px solid #ddd; 
+        }
+        video {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">♻ Полипропилен</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#team">Команда</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#problem">Проблема</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#goals">Цели</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#research">Исследования</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#results">Результаты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главная секция -->
+    <section id="home" class="pt-5">
+        <div class="container text-center">
+            <h1 class="mb-4">Вовлечение отходов полипропилена в переработку</h1>
+            <div class="ratio ratio-16x9 mb-4">
+                <video controls poster="images/photo_2025-03-27_10-41-13.jpg">
+                    <source src="video/IMG_7098.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео
+                </video>
+            </div>
+            <p class="lead"><em>Используем <strong>каталитический крекинг</strong> для экологичного будущего!</em></p>
+        </div>
+    </section>
+
+    <!-- Команда -->
+<section id="team">
+    <div class="container">
+        <h2 class="mb-4">🏆 Команда проекта</h2>
+        
+        <!-- Список участников -->
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Докладчик (первый в списке) -->
+            <div class="col">
+                <div class="card h-100 border-primary">
+                    <div class="card-body">
+                        <h5 class="card-title">Нигматзянов Камил</h5>
+                        <p class="card-text">
+                            4 курс, ПНИПУ<br>
+                            <small class="text-muted">Докладчик</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Остальные участники -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Глухов Никита</h5>
+                        <p class="card-text">3 курс, ПНИПУ</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Мешалкина Евдокия</h5>
+                        <p class="card-text">Политехническая школа ПНИПУ</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Брант Анна</h5>
+                        <p class="card-text">Политехническая школа ПНИПУ</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Уланов Ярослав</h5>
+                        <p class="card-text">Политехническая школа ПНИПУ</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Мансурова Софья</h5>
+                        <p class="card-text">Политехническая школа ПНИПУ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Наставники -->
+        <div class="mt-5 p-3 bg-light rounded">
+            <h5>Научные руководители:</h5>
+            <ul class="list-unstyled">
+                <li>🎓 Олькова Алина Сергеевна — ассистент кафедры «Химические технологии», ПНИПУ</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+    <!-- График производства -->
+<section id="problem">
+    <div class="container">
+        <h2 class="mb-4">❗ Проблематика</h2>
+        
+        <!-- График 1: Производство vs Переработка -->
+        <div class="row mb-5">
+            <div class="col-md-8">
+                <canvas id="recyclingChart"></canvas>
+            </div>
+            <div class="col-md-4 mt-4 mt-md-0">
+                <h5>Анализ за 2024 год:</h5>
+                <ul class="list-unstyled">
+                    <li>🏭 <strong>Произведено:</strong> 60 млн тонн</li>
+                    <li>♻ <strong>Переработано:</strong> 12 млн тонн (20%)</li>
+                    <li>🗑️ <strong>Выброшено:</strong> 48 млн тонн</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- График 2: Методы утилизации -->
+        <div class="row">
+            <div class="col-md-6">
+                <canvas id="methodsChart"></canvas>
+            </div>
+            <div class="col-md-6 mt-4 mt-md-0">
+                <h5>Распределение методов утилизации:</h5>
+                <ol>
+                    <li>Механическая переработка — 45%</li>
+                    <li>Сжигание — 30%</li>
+                    <li>Захоронение — 20%</li>
+                    <li>Компостирование — 5%</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // График 1: Столбчатая диаграмма
+        new Chart(document.getElementById('recyclingChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Производство', 'Переработка', 'Отходы'],
+                datasets: [{
+                    label: 'Полипропилен (млн тонн)',
+                    data: [60, 12, 48],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(75, 192, 192, 0.7)',
+                        'rgba(153, 102, 255, 0.7)'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Ежегодное обращение полипропилена'
+                    }
+                }
+            }
+        });
+
+        // График 2: Круговая диаграмма
+        new Chart(document.getElementById('methodsChart'), {
+            type: 'pie',
+            data: {
+                labels: ['Механическая', 'Сжигание', 'Захоронение', 'Компостирование'],
+                datasets: [{
+                    data: [45, 30, 20, 5],
+                    backgroundColor: [
+                        '#4BC0C0',
+                        '#FF6384',
+                        '#9966FF',
+                        '#FFCE56'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'right'
+                    }
+                }
+            }
+        });
+    </script>
+</section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
